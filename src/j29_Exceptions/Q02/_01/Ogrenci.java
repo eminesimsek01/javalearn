@@ -16,12 +16,9 @@ public class Ogrenci {
                 ", yas=" + yas +
                 '}';
     }
-
     public static List<Ogrenci> ogrenciList = new ArrayList<>();
-
     public Ogrenci() {
     }
-
     public Ogrenci(String ad, String soyad, int yas) {
         this.ad = ad;
         this.soyad = soyad;
