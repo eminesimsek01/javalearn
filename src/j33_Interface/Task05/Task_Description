@@ -1,0 +1,22 @@
+
+Variables: Askerlik, adli sicil kaydı, ortalama tecrübe
+Classler: IsbasvuruMain, MakineMuhendisi, BilgisayarMuhendisi
+Interface: IMühendis
+Methodlar: Askerlik durumunu sorgulama, adli sicil kaydını
+           sorgulama, mezuniyet ortalamasını ve iş teccrübesini yazdırma
+1.IMühendis adından bir interface oluşturun. Bu interface'e askerlik durumunu sorgulamak, adli sicil kaydını
+sorgulamak, mezuniyet ortalamasını ve iş teccrübesini yazdırmak için 4 metod oluşturunuz.
+-Mezuniyet ortalaması methodu derece değişkenine sahip olmalı.
+2.Makine Mühendisi ve Bilgisyar mühendisi adında iki class oluşturunuz. Bu class'larda askerlik ve adli sicli no
+variable'larını encapsulated bir şekilde oluşturunuz. Bu classların IMuhendisin tüm metodlarını implement etmesini
+sağlayınız. Her iki class için full parametreli contructor oluşturun. Makine Mühendisleri için referansı sorgulayan
+bir metod olmalı.
+3.IsbasvuruMain adında bir main class açarak farklı alanlarda mühendislik başvurusu yaparak başvuru bilgilerini(sicil
+kaydı, ortalama, askerlik ve tecrübe) bilgilerini yazdırınız.
+
+
+
+
+
+
+
