@@ -1,7 +1,9 @@
 package j35_Collection.LinkedSet;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 public class C01_LinkedList {
 
@@ -28,6 +30,13 @@ public class C01_LinkedList {
         System.out.println(ll1);//[JavaCan, Ebubekir, Gülsüm, Abdülaziz, Adem, İlker, Merve, uğur]
         ll1.addLast("JavaTar");
         System.out.println(ll1);//[JavaCan, Ebubekir, Gülsüm, Abdülaziz, Adem, İlker, Merve, uğur, JavaTar]
+
+        List<String> ll2=new LinkedList<>(Arrays.asList("Fatih","Erol","Nur"));//Data type interface list olan linkedlist
+        ll1.addAll(ll2);
+        //ll1.addAll("agam");//CTE parametre Col olmazsa
+        System.out.println("ll1 = " + ll1);//ll1 = [JavaCan, Ebubekir, Gülsüm, Abdülaziz, Adem, İlker, Merve, uğur, JavaTar, Fatih, Erol, Nur]
+        ll1.addAll(3,ll2);
+        System.out.println("ll1 = " + ll1);//ll1 = [JavaCan, Ebubekir, Gülsüm, Fatih, Erol, Nur, Abdülaziz, Adem, İlker, Merve, uğur, JavaTar, Fatih, Erol, Nur]
 
     }
 }

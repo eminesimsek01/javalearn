@@ -13,8 +13,7 @@ public class Task {
         yoksa "Agam aradığınız kişiye ulaşılamadı" print eden code create edinzi
 
          */
-
-        LinkedList<String> ll1 = new LinkedList<>(Arrays.asList("yakup", "javaCAN", "javaTAR", "Teykinay"));
+        LinkedList<String>ll1=new LinkedList<>(Arrays.asList("yakup","javacan","javaTar","Teykinay"));
         Scanner sc = new Scanner(System.in);
         System.out.println("Agam kime bakmıştınız : ");
         String aganınAdamı = sc.next();

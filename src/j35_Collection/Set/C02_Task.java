@@ -20,7 +20,7 @@ public class C02_Task {
     }//main sonu
 
     private static ArrayList<String> arrayListeCevir(String[] arr) {
-        ArrayList<String>arlst=new ArrayList<>(List.of(arr));
+        ArrayList<String>arlst=new ArrayList<>(List.of(arr));//Arrayi array liste nasıl çevirirsin
         return arlst;
     }
 }
