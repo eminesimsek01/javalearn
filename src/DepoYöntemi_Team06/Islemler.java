@@ -1,5 +1,4 @@
 package DepoYöntemi_Team06;
-
 import java.util.Scanner;
 
 public class Islemler {
