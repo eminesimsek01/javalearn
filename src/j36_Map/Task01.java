@@ -1,12 +1,13 @@
 package j36_Map;
 
+import java.security.KeyStore;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Task01 {
     public static void main(String[] args) {
 
-      // task -> urun fiyatları toplamını hesaplayan code create ediniz..
+
         HashMap<String, Integer> map = new HashMap<>();
 
         map.put("Amazon", 296);
@@ -14,14 +15,16 @@ public class Task01 {
         map.put("Saturn", 326);
         map.put("MediaMarkt", 340);
         map.put("Apple Store", 320);
+        // task -> urun fiyatları toplamını hesaplayan code create ediniz..
+        int fiyatToplam = 0;
 
-        int toplam=0;
-        for (Map.Entry<String, Integer>w: map.entrySet()){//w'da map'in her şeyi var
-            toplam+=w.getValue();
+        // for (Map.Entry<String, Integer> a : map.entrySet()){//["Amazon"=296,"Ebay"=301,..]
+        //     fiyatToplam+=a.getValue();
+        // }
+        for (Integer w : map.values()) {//[296,301,..]
+            fiyatToplam += w;
         }
-        for (Integer w: map.values()){//["Amazon"=296
-            toplam+=w;
-        }
-        System.out.println(toplam);
+
+        System.out.println("agama fiyat toplamın : " + fiyatToplam);// 1583
     }
 }

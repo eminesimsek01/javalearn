@@ -8,7 +8,6 @@ public class Urunler {
     private String birim;
     private String raf;
 
-
     public Urunler(String urunIsmi, String uretici, String birim) {
         this.urunIsmi = urunIsmi;
         this.uretici = uretici;

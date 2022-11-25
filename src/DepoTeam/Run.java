@@ -5,6 +5,5 @@ public class Run {
     Islemler obj = new Islemler();
     obj.menu();
 
-
     }
 }
