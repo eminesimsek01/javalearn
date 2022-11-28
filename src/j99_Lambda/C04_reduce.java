@@ -20,6 +20,9 @@ public class C04_reduce {
             //Lambda->Stream API
             System.out.println("\n   ***   ");
             ciftkaremaksimum(sayi);
+            citfelemanCarpPrint(sayi);
+            minBul(sayi);
+            yirmidorttenbuyukTekPrint(sayi);
     }//main sonu
             //Task: Listin çift elemanlarının karelerinin en büyüğünü print ediniz
     public static void ciftkaremaksimum (List<Integer>sayi){
@@ -37,4 +40,51 @@ public class C04_reduce {
                         //reduce(Math::max));//çift filtrelenen ve karesi alınan akış elemanları maksimum elemana göre reduce edildi.
                          reduce(Integer::max));//spesific class daha hızlı çalışır.
     }
+    //Task-> Listteki tüm elemanların toplamını print ediniz.
+
+    // Task : List'teki tum elemanlarin toplamini print ediniz.
+    public  static void elTopla(List<Integer> sayi){
+        System.out.println(sayi.
+                stream().reduce(Integer::sum));//Optional[626]
+        Optional<Integer> toplam=sayi.
+                stream().reduce(Integer::sum);
+        System.out.println(toplam);//Optional[626]
+
+        System.out.println("lambda exp. : "+sayi.stream().reduce(0, (a, b) -> a + b));//Lambda expression
+        /*
+        a : ilk değerini her zaman atanan identity değerden alır
+        b : değerini her zaman stream() akısdan alır.
+        a ilk değerden sonraki değerlerini action(işlem body)'den alır
+        */
+
+    }
+    //List'teki çift elemanların çarpımını yazdırınız.
+    List<Integer> sayi = new ArrayList<>(Arrays.asList(1, 3, 5,4,6,12,8));
+    public static void citfelemanCarpPrint (List<Integer>sayi){
+        System.out.println( sayi.
+                stream().
+                filter(C01_LambdaExpression::ciftMi).
+                reduce(Math::multiplyExact));//Math Class'dan math refere..
+        System.out.println(sayi.stream().filter(C01_LambdaExpression::ciftMi).reduce(1, (t, u) -> t * u));//Lamb. expression
+        //Başlangıç değeri olduğu için kesinlikle optional değer vermez. Null değer verme ihtimali yoktur
+    }
+
+    //Task: List'teki elemanlardan en küçüğünü 4 farklı yöntem ile print ediniz.
+    public static void minBul(List<Integer>sayi){
+        System.out.println(sayi.stream().reduce(Math::min));//1.yol->meth. refe.
+        System.out.println(sayi.stream().reduce(Integer::min));//2.yol-> meth. refe.
+        System.out.println(sayi.stream().reduce(Integer::min));//3.yol-> meth. refe.
+        System.out.println(sayi.stream().reduce(C04_reduce::byHalukMinBul));//3.yol
+
+    }
+    public static int byHalukMinBul (int a, int b){//math refe. için seed(tohum) method
+        return a<b?a:b;
+    }
+    //Task: Listteki 24'ten büyük en küçük tek sayıyı print ediniz.
+    public static void yirmidorttenbuyukTekPrint(List<Integer>sayi){
+        System.out.println(sayi.stream().filter(t -> t > 24 && t % 2 == 1).reduce(Integer::min));
+        //sayi.stream().filter(t->t>24&&C01_LambdaExpression::ciftMi).reduce(Integer::min);->CTE : exp. ve method
+        // referans aynı body^de olamaz.
+    }
+
 }
