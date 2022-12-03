@@ -23,6 +23,8 @@ public class C11_Stream_iterator {
         System.out.println("task08 -- > : "+istenenSayiXKuvvet(2, 3));//8
         System.out.println("task08 -- > : "+istenenSayiXKuvvet(10, 2));//100
         System.out.println("   ***   ");
+        ilkXkuvvetiPrintEtme(3,4);
+        faktöriyelhesaplama(6);
 
     }//main sonu
 
@@ -75,7 +77,7 @@ public class C11_Stream_iterator {
                         limit(x).//akısdaki ilk x eleman akısa alındı.
                         sum();//akısdaki ilk x eleman toplandı
     }
-    //TASK 05 --> 2'nin ilk x kuvvetini ekrana yazdiran code  create ediniz.
+    //TASK 05 --> 2'nin ilk x kadar kuvvetini ekrana yazdiran code  create ediniz.
     public static void ikininİlkXKuvvetiPrint(int x){
         IntStream.
                 iterate(2,t->t*2).//2'den başlayıp 2 ile çarpılarak tekrar işlemi tanımlandı->2,4,8...
@@ -85,8 +87,15 @@ public class C11_Stream_iterator {
     }
 
         //TASK 06 --> Istenilen bir sayinin ilk x kuvvetini print eden code  create ediniz.
+    public static void ilkXkuvvetiPrintEtme(int y,int x){
+        IntStream.iterate(y,t->t*y).limit(x).forEach(C01_LambdaExpression::yazdir);
+    }
 
         //TASK 07 --> Istenilen bir sayinin faktoriyelini hesaplayan code  create ediniz.
+    public static void faktöriyelhesaplama(int x){
+        IntStream.iterate(1, t -> t + 1).limit(x).reduce(Math::multiplyExact);
+
+    }
 
     //TASK 08 --> Istenilen bir sayinin  x. kuvvetini print eden code  create ediniz.
     public static OptionalInt istenenSayiXKuvvet(int istenenSayi, int x){
