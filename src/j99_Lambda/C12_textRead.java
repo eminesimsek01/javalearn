@@ -4,13 +4,16 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.stream.Stream;
 
 public class C12_textRead {
     public static void main(String[] args) throws IOException {
-//TASK 01 --> haluk dosyasini okuyunuz.(Console'a print ediniz.)
+
+        //TASK 01 --> haluk dosyasini okuyunuz.(Console'a print ediniz.)
         System.out.println("\n TASK 01 --> haluk dosyasini okuyunuz ");
-        Path hlk = Path.of("src/J99_Lambda/haluk");//erişilecek dosyanın path'i tanımlandı
+        Path hlk = Path.of("src\\j99_Lambda\\haluk");//erişilecek dosyanın path'i tanımlandı
         Stream<String> akıs = Files.lines(hlk);
         //Stream<String> akıs1= Files.lines(Path.of("src/J99_Lambda/haluk"));
 
@@ -19,7 +22,7 @@ public class C12_textRead {
 
         //TASK 02 --> haluk.txt dosyasini map okuyunuz.(Console'a buyuk harflerle print ediniz.)
         System.out.println("\n TASK 02 --> haluk.txt dosyasini buyuk harflerle okuyunuz ");
-        Files.lines(Paths.get("src/J99_Lambda/haluk")).//erişim verilen path deki saırlar akısa alındı
+        Files.lines(Paths.get("src\\j99_Lambda\\haluk")).//erişim verilen path deki satırlar akısa alındı
                 map(String::toUpperCase).//akısdaki  satırların Stringleri byk hrf update edildi
                 forEach(System.out::println);
 
@@ -41,12 +44,48 @@ public class C12_textRead {
                 count()//akısdaki elelmanlar saydırıldı
         );
         //TASK 05 --> haluk.txt dosyasindaki farkli kelimeleri  print ediniz..
+      Files.lines(Paths.get("src\\j99_Lambda\\haluk")).
+                map(t -> t.split(" ")).flatMap(Arrays::stream).distinct().forEach(t-> System.out.println(t+" "));
+        System.out.println();
+        System.out.println();
+
         //TASK 06 --> haluk.txt dosyasindaki tum kelimeleri natural order  print ediniz..
+        Files.lines(Paths.get( "src\\j99_Lambda\\haluk")).map(t->t.split(" ")).flatMap(Arrays::stream).sorted().forEach(t-> System.out.println(t+ " "));
+        System.out.println();
+        System.out.println();
+
         //TASK 07 --> haluk.txt dosyasinda "basari" kelimesinin kac kere gectigini buyuk harf kucuk harf bagımsız print ediniz.
+        System.out.println(Files.lines(Paths.get("src\\j99_Lambda\\haluk")).
+                map(t -> t.split(" ")).flatMap(Arrays::stream).map(t -> t.toLowerCase()).filter(t -> t.contains("emine")).count());
+        System.out.println();
+        System.out.println();
+
         //TASK 08 --> haluk.txt dosyasinda "a" harfi gecen kelimelerin sayisini print eden  programi create ediniz.
+        System.out.println(Files.lines(Paths.get("src\\j99_Lambda\\haluk")).
+                map(t -> t.split(" ")).flatMap(Arrays::stream).map(t -> t.toLowerCase()).filter(t -> t.contains("a")).count());
+        System.out.println();
+        System.out.println();
+
         //TASK 09 --> haluk.txt dosyasinda icinde "a" harfi gecen kelimeleri print ediniz.
+        Files.lines(Paths.get("src\\j99_Lambda\\haluk")).
+                map(t -> t.split(" ")).flatMap(Arrays::stream).map(t -> t.toLowerCase()).filter(t -> t.contains("a")).forEach(t-> System.out.println(t));
+        System.out.println();
+        System.out.println();
+
         //TASK 10 --> haluk.txt dosyasinda kac /farklı harf kullanildigini print ediniz.
+        System.out.println(Files.lines(Paths.get("src\\j99_Lambda\\haluk")).
+                map(t -> t.split("")).flatMap(Arrays::stream).map(t -> t.toLowerCase()).distinct().count());
+        System.out.println();
+        System.out.println();
+
         //TASK 11 --> haluk.txt dosyasinda kac farkli kelime kullanildigini print ediniz.
+        System.out.println(Files.lines(Paths.get("src\\j99_Lambda\\haluk")).
+                map(t -> t.split(" ")).flatMap(Arrays::stream).map(t -> t.toLowerCase()).distinct().count());
+        System.out.println();
+        System.out.println();
+
         //TASK 12 --> haluk.txt dosyasinda  farkli kelimeleri print ediniz
+        Files.lines(Paths.get("src\\j99_Lambda\\haluk")).
+                map(t -> t.split(" ")).flatMap(Arrays::stream).map(t -> t.toLowerCase()).distinct().forEach(t-> System.out.println(t));
     }
 }

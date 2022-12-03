@@ -42,7 +42,6 @@ public class C01_LambdaExpression {
              API, ayağınızı gaza bastığınızda motorun içinde neler olduğunu açıklamak zorunda değildir.
              Bu nedenle, içten yanmalı motorlu bir araba kullanmayı öğrendiyseniz, tamamen
              yeni bir dizi beceri öğrenmek zorunda kalmadan API sayesinde elektrikli bir arabayı rahatlıkla kullanabilirsiniz.
-
 	 */
 
         List<Integer> sayi = new ArrayList<>(Arrays.asList(24, 38, 49, 33, 7, 3, 42, 66, 75, 45, 46, 55, 35, 25, 67, 16));
@@ -68,7 +67,6 @@ public class C01_LambdaExpression {
         }
     }
     //Task : "Functional Programming":cincix code kullanarak list elemanlarını aynı satirda aralarında bosluk olacak sekilde print ediniz.
-
 
     public static void printElFunctional(List<Integer> sayi) {//functional pr
 
@@ -97,7 +95,6 @@ public class C01_LambdaExpression {
 
         */
 
-
     public static void printElFunctional1(List<Integer> sayi) {//functional pr
 
         sayi.//aksiyona girecek list coll.
@@ -106,11 +103,9 @@ public class C01_LambdaExpression {
         //MethodKkaynagı::Method ->meth reference
 
     }
-
     public static void yazdir(int a) {//normal allahın mmethodu tek aksiyonlu->seed method(tohum)->refere edilecek method
         System.out.print(a + " ");
     }
-
     public static void printElFunctional2(List<Integer> sayi) {//functional pr
         sayi.//aksiyona girecek list coll.
                 stream().//List elemanlarını yukarıdan aşağıya akısa alır.
