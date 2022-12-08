@@ -1,9 +1,6 @@
 package j36_Map;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class Task04 {
 
@@ -23,27 +20,27 @@ public class Task04 {
      *
      * İpucu : "." özel karakter olduğu için "\\." şeklinde split ediniz.
      * */
-
+     static Map<String, Integer>kelimesayısı=new HashMap<>();
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("birşeyler yazın");
-        String cümle = scan.nextLine();
 
-        splitcim(cümle);
+        Scanner scan=new Scanner (System.in);
+        System.out.println("Bir metin giriniz: ");
+        String metin=scan.nextLine();
+        System.out.println(metin);
+        metinparcala(metin);
 
     }
-    private static void splitcim(String cümle) {
-        HashMap<String, Integer> map = new HashMap<>();
-        ArrayList<String> parcalanan = new ArrayList<>(Arrays.asList(cümle.split(" ")));
-        System.out.println(parcalanan);
-        int tekrarsıysı = 1;
-        for (String w : parcalanan) {
-            if (!map.containsKey(w)) {
-                map.put(w, tekrarsıysı);
-            } else if((map.containsKey(w))) map.put(w, tekrarsıysı++);
+    public static void metinparcala(String metin){
+        ArrayList<String>kelimeler=new ArrayList<>(Arrays.asList(metin.split(" ")));
+        System.out.println(kelimeler);
 
-        }
+        for (String w:kelimeler){
+            if (!kelimesayısı.containsKey(w)) {
+                kelimesayısı.put(w,1);
+            }
+            else kelimesayısı.put(w,kelimesayısı.get(w)+1);
 
-        System.out.println(map);
+        } System.out.println(kelimesayısı);
+
     }
 }
