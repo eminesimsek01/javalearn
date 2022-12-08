@@ -12,6 +12,22 @@ public class Task02 {
          print eden code create ediniz
          */
 
+        Map<String, String> eminekartvizit =new HashMap<>();
+        eminekartvizit.put("isim","Emine");
+        eminekartvizit.put("email","gmail");
+        eminekartvizit.put("adres","çamlica");
+        eminekartvizit.put("tel","76876");
+
+        Map<String, String> meymetkartvizit=new HashMap<>();
+        meymetkartvizit.put("isim","Meymet");
+        meymetkartvizit.put("email", "meygmail");
+        meymetkartvizit.put("tel", "45678");
+        meymetkartvizit.put("adres", "emek");
+        Map<String,Map<String,String>>kartvizitler=new HashMap<>();
+        kartvizitler.put("Emine",eminekartvizit);
+        kartvizitler.put("Meymet",meymetkartvizit);
+
+        System.out.println(kartvizitler);
 
     }
 }
