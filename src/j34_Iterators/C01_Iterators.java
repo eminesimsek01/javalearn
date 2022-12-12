@@ -32,8 +32,8 @@ public class C01_Iterators {
         }
         System.out.println("update sonrası l1 = " + l1);//update sonrası l1 = [Nur:) , Gamze:) , Erol:) , Bekir:) ]
         /*
-        index desteklemeyen yapılarda tekrarlayan aksiyon için for each loop update yapamayabilir.
-        Bu durumda java iterator interface'den tanımlanacak variable ile tekrarlayan aksiyonlar idex olmadan yapılır.
+        index desteklemeyen yapılarda tekrarlayan aksiyon için for each loop update yapamayabilir, yukarıdaki örnekte olduğu gibi.
+        Bu durumda java iterator interface'den tanımlanacak variable ile tekrarlayan aksiyonlar index olmadan yapılır.
          */
 
         System.out.println();
@@ -41,7 +41,7 @@ public class C01_Iterators {
         Iterator<String> it1 = l1.iterator();//interator interfaceden it1 variable tanımlandı.
         //Atama olarak l1 elemanları atandı
         while (it1.hasNext()) {//has.Next()-> it1 elemanları için pointer olduğu yerde eleman varsa true, yoksa false
-            // verir ve pointe bir sonraki eleman önüne koyulur.
+            // verir ve pointer bir sonraki eleman önüne koyulur.
             it1.next();//next()-> listin pointer önündeki elemanını return eder.
         }
         List<String> l2 = new ArrayList<>(Arrays.asList("Emine", "Mehmet", "Elif", "Turna"));

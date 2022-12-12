@@ -29,18 +29,14 @@ public class C01_AccessModifier {
     private C01_AccessModifier() {//private  p'siz cons. kendi class'dan erişilir
         System.out.println("agama private cons. selam :)");
     }
-    public C01_AccessModifier(int privateYas, int defaultYas) {//public 2p'li cos.
+    public C01_AccessModifier(int privateYas, int defaultYas) {//public 2p'li cons.
         System.out.println("agama public cons. selam :)");
-
-
     }
-
     private void privateMethod(){
         System.out.println("private method'dan agaya selam");
     }
     protected void protectedMethod(){
         System.out.println("protected method'dan agaya selam");
-
     }
     //C01_AccessModifier obj3=new C01_AccessModifier();//private cons call edilid aynı class
 }

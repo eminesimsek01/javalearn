@@ -1,12 +1,13 @@
 package j36_Map;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Task08 {
     /*
     ismi update() olan bir method oluşturun.
-    Parametreleri , Integer -String HashMap,  int ve String olmalı. (3ayrı parametre)
+    Parametreleri Integer -String HashMap,  int ve String olmalı. (3ayrı parametre)
     return tipi  Integer - String HashMap
     Eğer HashMap, int olan parametreyi içeriyorsa,
     int değerinde var olan String'i güncelleyin.
@@ -27,27 +28,30 @@ public class Task08 {
      */
 
     public static void main(String[] args) {
-        HashMap<Integer, String> hm = new HashMap<>();
-        hm.put(1, "New jersey");
-        hm.put(2, "New York");
-        hm.put(3, "London");
-        hm.put(4, "Paris");
+        Map<Integer, String> mapci=new HashMap<>();
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Agam sayi giresen : ");
-        int sayi = sc.nextInt();
-
-        System.out.print("Agam sehir giresen : ");
-        String sehir = sc.next();
-
-        System.out.println("update(hm, sayi, sehir) = " + update(hm, sayi, sehir));
+        mapci.put(1,"New jersey");
+        mapci.put(2,"New York");
+        mapci.put(3,"Miami");
+        mapci.put(4,"Paris");
+        mapci.put(5,"Bursa");
+        Scanner scan=new Scanner (System.in);
+        System.out.println("Bir sayı giriniz, değerini değiştirelim...");
+        int secim=scan.nextInt();
+        System.out.println("Neyle değiştirelim, söylen bare..");
+        String onerılnesehır=scan.nextLine();
+        update(mapci, secim, onerılnesehır);
 
     }//main sonu
 
-    private static HashMap<Integer, String> update(HashMap<Integer, String> hm, int sayi, String sehir) {
-        if (hm.containsKey(sayi))
-            hm.put(sayi, sehir);
-        return hm;
+    private static HashMap<Integer, String> update(Map<Integer, String> mapci, int secim, String onerılnesehır) {
+        if (mapci.containsKey(secim)) {
+            mapci.put(secim, onerılnesehır);
+        }
+
+
+        return (HashMap<Integer, String>) mapci;
     }
+
+
 }

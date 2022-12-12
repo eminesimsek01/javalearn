@@ -11,3 +11,4 @@ public class Mammal extends Hayvancık {//Hayvancık parent class'ın child clas
         System.out.println("nur topu gibi yavrısı olur");
     }
 }
+

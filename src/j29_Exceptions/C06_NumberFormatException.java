@@ -2,7 +2,8 @@ package j29_Exceptions;
 
 public class C06_NumberFormatException {
     public static void main(String[] args) {
-        // NumberFormatException -> Sayi formatın olmayan bir datayı parseInt() method runn ederek ınteger'e cevirildiğinde oluşan RTE exception
+        // NumberFormatException -> Sayi formatında olmayan bir datayı parseInt() method kullanılarak ınteger'e cevirildiğinde oluşan
+        // RTE exception
         // java'da String içinde ki rakam karakterler parseInt() method ile ınt değere atanabilir
 
         String str = "1453";

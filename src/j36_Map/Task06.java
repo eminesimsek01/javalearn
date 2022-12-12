@@ -21,24 +21,23 @@ public class Task06 {
     Integer 3
     Cevap Elephant olmalı.
      */
-
     public static void main(String[] args) {
         Map<Integer, String> mp = new HashMap<>();
-        mp.put(1,"Lion");
-        mp.put(2,"Tiger");
-        mp.put(3,"Elephant");
-        mp.put(4,"Cat");
-        mp.put(5,"dog");
+        mp.put(1, "Lion");
+        mp.put(2, "Tiger");
+        mp.put(3, "Elephant");
+        mp.put(4, "Cat");
+        mp.put(5, "Dog");
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("agam sayi giresen : ");
-        int sayi=sc.nextInt();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Sayı gir");
+        int sayi = scan.nextInt();
 
-        System.out.println("map1(mp,sayi) = " + map1(mp, sayi));
+        System.out.println(map1(mp, sayi));
+    }
+    private static String map1(Map<Integer, String> mp, int sayi) {
 
-    }//main sonu
-
-    public static String map1(Map<Integer, String> mp, int sayi) {
-        return mp.get(sayi); //sayi:Int Key değerine karsılık value get eder
+        String value = mp.get(sayi);
+        return value;
     }
 }

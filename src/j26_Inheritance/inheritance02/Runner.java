@@ -46,7 +46,7 @@ public class Runner {
         System.out.println(k2.c);
         System.out.println(k2.a);
         //k2.d->CTE K2 objesi data type'ı mammal class d varible yok call edilemez.
-        k2.ma();//mA-> HAYVANCIK method call
+        k2.ma();//mA-> HAYVANCIK method call 
         k2.mC();//mC-> Kedi class method call
         k2.mM();//mM-> Mammal class method call
 

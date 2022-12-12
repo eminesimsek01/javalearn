@@ -68,10 +68,10 @@ public class C01_Interface {
 
         10)Interface yapilarda istenirse abstract olmayan concrete method creat edilebilir.
             a)AccMod'den sonra "default" veya "static" keyword kullanilmali.ikisi br arada kullanılamaz
-    b)Interface yapilarda concrete method icin kullanilan "default" keyword'u kesinlikle asla AccMod turunu vermez .
-    c)Interface yapilarda concrete method child class tarafindan override edilmek zorunda degildir.
-    d)Interface yapilarda "default" olarak creat edilen concrete method child class'ı ancak obj ile call edilir.
-    e)Interface yapilarda "static" olarak creat edilen concrete method child class'ı ancak Datatype(interface name) ile  call edilir.
+            b)Interface yapilarda concrete method icin kullanilan "default" keyword'u kesinlikle asla AccMod turunu vermez .
+            c)Interface yapilarda concrete method child class tarafindan override edilmek zorunda degildir.
+            d)Interface yapilarda "default" olarak creat edilen concrete method child class'ı ancak obj ile call edilir.
+            e)Interface yapilarda "static" olarak creat edilen concrete method child class'ı ancak Datatype(interface name) ile  call edilir.
 
             11) Interface yapilarda istenirse main method tanımlanabilir ama bad practice
             /*

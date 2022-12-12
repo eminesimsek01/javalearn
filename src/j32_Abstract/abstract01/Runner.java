@@ -9,6 +9,5 @@ public class Runner {
         cvc.motor();
         cvc.kapı();
         cvc.koltuk();
-
     }
 }
