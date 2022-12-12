@@ -5,7 +5,7 @@ public class Runner {
         Isci mrb1=new Isci();
         mrb1.maasBilgisi();
         mrb1.maasHesapla();
-        mrb1.name="Emine";
+        mrb1.name="Ali";
         System.out.println(mrb1.name);
         mrb1.sigorta();//abs parent classtaki conc method call//Agam özel sigorta kapsamındasınız :)
         IdariPersonel cncCdr=new IdariPersonel();

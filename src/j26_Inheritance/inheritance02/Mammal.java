@@ -7,7 +7,7 @@ public class Mammal extends Hayvancık {//Hayvancık parent class'ın child clas
     }
     public Mammal(char c) {//p'li constructor
         super(17);
-        System.out.println("Agam ahan da Mammal p'li consctuctor...");
+        System.out.println("Agam ahan da Mammal p'li constructor...");
     }
     public void mC() {
         System.out.println("mC -> Mammal class meth call ");

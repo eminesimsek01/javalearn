@@ -23,6 +23,7 @@ public class Task02 {
         meymetkartvizit.put("email", "meygmail");
         meymetkartvizit.put("tel", "45678");
         meymetkartvizit.put("adres", "emek");
+
         Map<String,Map<String,String>>kartvizitler=new HashMap<>();
         kartvizitler.put("Emine",eminekartvizit);
         kartvizitler.put("Meymet",meymetkartvizit);

@@ -12,24 +12,18 @@ public class Task09 {
      Enginar 150
      Üzüm 145
      Nar 250
-
      */
 
     public static void main(String[] args) {
+        HashMap<String, Integer>manavmap=new HashMap<>();
+        manavmap.put("Kiraz",100);
+        manavmap.put("İncir",200);
+        manavmap.put("Enginar",150);
+        manavmap.put("Üzüm",145);
+        manavmap.put("Nar",250);
 
-
-        Map<String, Integer> hm = new HashMap<>();
-
-        hm.put("Kiraz", 100);
-        hm.put("İncir", 200);
-        hm.put("Enginar", 150);
-        hm.put("Üzüm", 145);
-        hm.put("Nar", 250);
-
-        for (Map.Entry<String, Integer> hm2 : hm.entrySet()) {
-            System.out.println(hm2.getKey() + " " + hm2.getValue());
-
+        for (Map.Entry w:manavmap.entrySet()){
+            System.out.print(w+ " ");
         }
-
     }
 }

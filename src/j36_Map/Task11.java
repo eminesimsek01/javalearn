@@ -1,7 +1,9 @@
 package j36_Map;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Task11 {
       /*
@@ -17,25 +19,16 @@ public class Task11 {
 */
 
     public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Bir cümle giriniz...");
+        String cumle=scan.nextLine();
+        Map<String, Integer>kelimesayısı=new HashMap<>((Map) Arrays.asList(cumle.split(" ")));
 
-        String str = "Ali came to school and Ayse came to school";
-        System.out.println(countWords(str));
 
-    }
-
-    public static Map<String,Integer> countWords(String str){
-
-        Map<String,Integer> myMap = new HashMap<>();
-        String arr[] = str.split(" ");
-
-        for (int i = 0; i < arr.length; i++) {
-            if(myMap.containsKey(arr[i])) {
-                myMap.put(arr[i],myMap.get(arr[i])+1);
-            }else {
-                myMap.put(arr[i], 1);
-            }
         }
 
-        return myMap;
+
+
     }
-}
+
+

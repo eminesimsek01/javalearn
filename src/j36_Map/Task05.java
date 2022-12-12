@@ -1,37 +1,27 @@
 package j36_Map;
 
-import java.util.Map;
-import java.util.Scanner;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Task05 {
     //Task->   TreeMap Kullanarak Bir cumlenin içindeki harflerin frekansını(adetini) hesaplayıp print  code create ediniz
+    static Map<String, Integer>harffrekansları=new TreeMap<>();
+
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter your sentence...");
-        String sentence = scan.nextLine();
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Bir cümle giriniz: ");
+        String cümle=scan.nextLine();
+        List<String> harffrekanslar=new ArrayList<>(Arrays.asList(cümle.split("")));
+        harffrekanslar.removeAll(Collections.singleton(" "));//
+        harffrekanslar.removeAll(Collections.singleton("."));
+        System.out.println(harffrekanslar);
 
-        Map<Character, Integer> frekans = new TreeMap<>();
-
-        for (int i = 0; i < sentence.length(); i++) {
-
-            char c = sentence.charAt(i);
-
-            if (frekans.containsKey(c)) {
-                frekans.replace(c, frekans.get(c) + 1);
-            } else {
-                frekans.put(c, 1);
+        for(String w:harffrekanslar){
+            if (harffrekansları.containsKey(w)){
+                harffrekansları.put(w,harffrekansları.get(w)+1);
             }
-
+            else harffrekansları.put(w,1);
         }
-
-        for (Map.Entry<Character, Integer> entry : frekans.entrySet()) {
-            System.out.println("Karakter " + entry.getKey() + " " + entry.getValue() + " kadar var...");
-        }
-
-
+        System.out.println(harffrekansları);
     }
-
-
 }
 

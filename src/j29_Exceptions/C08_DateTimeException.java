@@ -9,7 +9,7 @@ public class C08_DateTimeException {
 
 
         try {
-            LocalDate date=LocalDate.of(2022,11,30);
+            LocalDate date=LocalDate.of(2022,11,33);
 
             System.out.println("agam try block da bu yazıyı okuduysan excp fırlatmadı komut sorunsuz ");
         } catch (DateTimeException e) {

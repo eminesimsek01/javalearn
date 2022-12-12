@@ -7,7 +7,7 @@ public abstract class Honda {//parent abstract class
      void sunrooff(){
          System.out.println("agam keyfini bilirsennn  ama subroof extra ücret :)");
      }
-// abs  class'da variable tanımlanabilir mi -> evet
+     // abs  class'da variable tanımlanabilir mi -> evet
     String name="Gülsüm team lead";
      //variable'lar abstarct tanımlanır mı? -> kesinlikle hayır
     //public  abstract  int yas=48;//-> o-la -mazzz
