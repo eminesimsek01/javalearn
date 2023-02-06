@@ -1,7 +1,6 @@
 package day1;
 
 import java.util.Scanner;
-
 public class Q07_IsDigit {
       /*
      Create a method that accepts a String as parameter and finds the sum of digits in that String.
@@ -28,5 +27,4 @@ public class Q07_IsDigit {
         }
         System.out.println("Sum of digits:"+sum);
     }
-
 }
