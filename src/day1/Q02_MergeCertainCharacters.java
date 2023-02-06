@@ -1,7 +1,6 @@
 package day1;
 
 import java.util.Scanner;
-
 public class Q02_MergeCertainCharacters {
     /*
      * Kulanicidan alinan bir Stringin ilk ve son harfini yine kulanicidan alinan sayi kadar
@@ -10,7 +9,6 @@ public class Q02_MergeCertainCharacters {
      * ornek:  input            output
      *         elma  2           eaea
      *         army  3           ayayay
-
      */
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
@@ -18,7 +16,6 @@ public class Q02_MergeCertainCharacters {
         String str=scan.nextLine();
         System.out.println("Bir sayı giriniz");
         int num=scan.nextInt();
-
         System.out.println("ilkSonHarf() = " + ilkSonHarf(str,num));
     }
     private static String ilkSonHarf(String str, int sayi) {
@@ -30,6 +27,4 @@ public class Q02_MergeCertainCharacters {
         }
         return output;
     }
-
-
 }

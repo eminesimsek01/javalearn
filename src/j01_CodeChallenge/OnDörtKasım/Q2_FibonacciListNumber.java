@@ -3,7 +3,6 @@ package j01_CodeChallenge.OnDörtKasım;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 public class Q2_FibonacciListNumber {
     public static void main(String[] args) {
         //Q02_FibonacciListNumber
@@ -11,7 +10,6 @@ public class Q2_FibonacciListNumber {
          Kullanıcıdan alınan bir tamsayıya kadar FIBONACCI dizisi oluşturun.
          0-1-1-2-3-5-8-13-21-34....
          */
-
         List<Integer> fibonacci = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
         System.out.println("bir sayi giriniz :");
@@ -34,7 +32,6 @@ public class Q2_FibonacciListNumber {
         } else {
             System.out.println("Girdiginiz sayi fibonacci dizisinde bulunmaktadir.." + fibonacci);
             //kullanici direkt fibonacci sayisi girerse calisacak kod satiri
-
         }
     }
 }

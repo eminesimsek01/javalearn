@@ -2,9 +2,7 @@ package j01_CodeChallenge.OnDörtKasım;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class Q4_DifferenceBetweenArray {
-
         /*
         Q04_DifferenceBetweenArray_LargestAndSmallestElements
         Create a function that takes an array and the difference between the largest
@@ -26,6 +24,5 @@ public class Q4_DifferenceBetweenArray {
             System.out.println(Arrays.toString(arr));
             System.out.println("differance :" +(arr[uzunluk-1] - arr[0]));
         }
-
     }
 

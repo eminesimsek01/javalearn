@@ -1,7 +1,6 @@
 package j01_CodeChallenge.OnDörtKasım;
 
 import java.util.Scanner;
-
 public class Q3_MükemmelSayı {
       //Q03_PerfectNumber
     /* Perfect Number (Mukemmel sayi)
@@ -17,7 +16,6 @@ public class Q3_MükemmelSayı {
         Scanner scan=new Scanner(System.in);
         System.out.println("Bir sayı giriniz:");
         int sayı=scan.nextInt();
-
         perfectnumber(sayı);
         girilensayıyakadar(sayı);
     }
@@ -34,7 +32,6 @@ public class Q3_MükemmelSayı {
             }toplam=0;
         }
     }
-
     private static void perfectnumber(int sayı) {
         int toplam=0;
         for (int i=1; i<sayı; i++){//1'den başlayarak bölenleri kontrol edeceğiz, sayı dahil olmamalı

@@ -2,7 +2,6 @@ package day1;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class Q01_CountsOfCharactersWithArray {
    /*
      Kullanicidan bir String aliniz.
@@ -34,8 +33,4 @@ public class Q01_CountsOfCharactersWithArray {
        }
        //karakterleri karşılaştırmak için for loop
    }
-
-
-
-
 }
