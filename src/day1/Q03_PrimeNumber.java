@@ -1,7 +1,6 @@
 package day1;
 
 import java.util.Scanner;
-
 public class Q03_PrimeNumber {
     /*
     Ask user enter a positive number and check if it is prime or not
