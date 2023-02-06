@@ -1,7 +1,6 @@
 package j01_CodeChallenge.OnDörtKasım;
 
 import java.util.Scanner;
-
 public class Q1_ArmstrongSayı {
     public static void main(String[] args) {
     /*  soru1: Check if the integer is an Armstrong numbers to 4 digit numbers(4 digit-> exclusive)
@@ -13,18 +12,15 @@ public class Q1_ArmstrongSayı {
       soru2: Birden baslayarak girilen sayıya kadar her bir tamsayının amstrong sayı olup olmadıgını
       gösteren program yazınız */
         //4 basamak için çalışmıyor
-
         Scanner scan=new Scanner(System.in);
         System.out.println("Bir Sayı giriniz : ");
         int sayı=scan.nextInt();
         armstrong(sayı);
     }
-
     static void armstrong(int sayı) {
         int sayınınkupleritoplamı=0;
         int basamaktaKisayı=0;
         int girilensayı=sayı;
-
         while (sayı>0){
             basamaktaKisayı=sayı%10;
             sayınınkupleritoplamı+=(basamaktaKisayı*basamaktaKisayı*basamaktaKisayı);

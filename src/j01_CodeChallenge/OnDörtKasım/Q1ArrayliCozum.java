@@ -3,7 +3,6 @@ package j01_CodeChallenge.OnDörtKasım;
 import java.util.Scanner;
 
 
-
 public class Q1ArrayliCozum {
     public static void main(String[] args) {
        // Q02_ArmstrongNumber_4Digits
@@ -19,11 +18,9 @@ public class Q1ArrayliCozum {
         String strSayı=scan.nextLine();
         armstrong1(strSayı);
     }
-
     private static void armstrong1(String strSayı) {
         String [] basamak =strSayı.split("");
         int toplam=0;
-
         for (int i=0; i<basamak.length; i++){
             toplam+=Math.pow(Integer.valueOf(basamak[i]),basamak.length);
             //String olan her bir basamağı integera çevirdik-> taban
